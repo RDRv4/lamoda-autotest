@@ -16,14 +16,14 @@ public class AddProductToCartTest extends TestBase {
         });
 
         sleep(1000);
-//
-//        step("Select size", () -> {
-//            $("._sizeValue_14ypi_285").shouldHave(text("Выберите размер")).click();
-//            $$("._colspanMain_14ypi_184").findBy(text("52/54 RUS")).click();
-//        });
-//
-//        step("Click on 'Add to Cart' button", () -> {
-//            $("._wrapper_1u4cj_6").shouldHave(text("Добавить в корзину")).click();
-//        });
+
+        step("Select size", () -> {
+            $("._sizeValue_14ypi_285").shouldHave(text("Выберите размер")).click();
+            $$("._colspanMain_14ypi_184").findBy(text("44 RUS")).click();
+        });
+
+        step("Click on 'Add to Cart' button", () -> {
+            $("._wrapper_1u4cj_6").shouldHave(text("Добавить в корзину")).click();
+        });
     }
 }
