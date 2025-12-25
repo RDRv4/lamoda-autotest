@@ -15,18 +15,8 @@ public class AddProductToCartTest extends TestBase {
     @Test
     void testAddingToCart() {
 
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
-
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
-                "enableVNC", true,
-                "enableVideo", true
-        ));
-        Configuration.browserCapabilities = capabilities;
-
-
         step("Open Product Card", () -> {
-            open("https://www.lamoda.by/p/mp002xm0drq1/clothes-tomtailor-kardigan/");
+            open("/p/mp002xm0drq1/clothes-tomtailor-kardigan/");
         });
 
         step("Select size", () -> {
