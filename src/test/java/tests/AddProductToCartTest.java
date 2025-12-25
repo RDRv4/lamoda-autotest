@@ -1,5 +1,6 @@
 package tests;
 
+import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
@@ -9,6 +10,9 @@ public class AddProductToCartTest extends TestBase {
 
     @Test
     void testAddingToCart() {
+
+        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+
 
         open("https://www.lamoda.by/p/mp002xm0drq1/clothes-tomtailor-kardigan/");
         $("._sizeValue_14ypi_285").shouldHave(text("Выберите размер")).click();
