@@ -15,8 +15,6 @@ public class AddProductToCartTest extends TestBase {
             open("/p/rtlaeq682801/shoes-hebymango-botinki/");
         });
 
-        sleep(1000);
-
         step("Select size", () -> {
             $("._sizeValue_14ypi_285").shouldHave(text("Выберите размер")).click();
             $$("._colspanMain_14ypi_184").findBy(text("44 RUS")).click();
