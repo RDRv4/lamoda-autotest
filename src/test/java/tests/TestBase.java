@@ -7,6 +7,7 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 
 import static com.codeborne.selenide.Selenide.clearBrowserCookies;
 import static com.codeborne.selenide.Selenide.clearBrowserLocalStorage;
@@ -26,6 +27,7 @@ public class TestBase {
     }
 
     @AfterEach
+    @Disabled
     void addAttachments() {
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();

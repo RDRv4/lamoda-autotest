@@ -23,7 +23,6 @@ public interface ProjectConfig extends Config {
     @DefaultValue("127.0")
     String browserVersion();
 
-    @DefaultValue("https://user1:1234@selenoid.autotests.cloud/wd/hub")
     String remoteDriverUrl();
 
     String userEmail();
