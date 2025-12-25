@@ -1,8 +1,6 @@
 package tests;
 
 import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.logevents.SelenideLogger;
-import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -26,8 +24,6 @@ public class AddProductToCartTest extends TestBase {
         ));
         Configuration.browserCapabilities = capabilities;
 
-
-        //SelenideLogger.addListener("allure", new AllureSelenide());
 
         step("Open Product Card", () -> {
             open("https://www.lamoda.by/p/mp002xm0drq1/clothes-tomtailor-kardigan/");
