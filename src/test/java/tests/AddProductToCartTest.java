@@ -1,6 +1,8 @@
 package tests;
 
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.logevents.SelenideLogger;
+import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -8,6 +10,7 @@ import java.util.Map;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
+import static io.qameta.allure.Allure.step;
 
 public class AddProductToCartTest extends TestBase {
 
@@ -24,12 +27,21 @@ public class AddProductToCartTest extends TestBase {
         Configuration.browserCapabilities = capabilities;
 
 
-        open("https://www.lamoda.by/p/mp002xm0drq1/clothes-tomtailor-kardigan/");
-        $("._sizeValue_14ypi_285").shouldHave(text("Выберите размер")).click();
+        SelenideLogger.addListener("allure", new AllureSelenide());
 
-        $$("._colspanMain_14ypi_184").findBy(text("52/54 RUS")).click();
+        step("Open Product Card", () -> {
+            open("https://www.lamoda.by/p/mp002xm0drq1/clothes-tomtailor-kardigan/");
+        });
 
-        $("._wrapper_1u4cj_6").shouldHave(text("Добавить в корзину")).click();
+        step("Select size", () -> {
+            $("._sizeValue_14ypi_285").shouldHave(text("Выберите размер")).click();
+            $$("._colspanMain_14ypi_184").findBy(text("52/54 RUS")).click();
+        });
+
+        step("Click on 'Add to Cart' button", () -> {
+            $("._wrapper_1u4cj_6").shouldHave(text("Добавить в корзину")).click();
+        });
+
 
         sleep(1000);
     }
