@@ -27,7 +27,7 @@ public class AddProductToCartTest extends TestBase {
         Configuration.browserCapabilities = capabilities;
 
 
-        SelenideLogger.addListener("allure", new AllureSelenide());
+        //SelenideLogger.addListener("allure", new AllureSelenide());
 
         step("Open Product Card", () -> {
             open("https://www.lamoda.by/p/mp002xm0drq1/clothes-tomtailor-kardigan/");
