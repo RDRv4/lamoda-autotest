@@ -13,11 +13,11 @@ public class TestBase {
 
     @BeforeAll
     static void beforeAll() {
-        Configuration.baseUrl = "https://demoqa.com";
-        Configuration.browserSize = "1920x1080";
+        Configuration.baseUrl = System.getProperty("base_url", "https://www.lamoda.by/");
+        Configuration.browserSize = System.getProperty("browser_size", "1920x1080");
+        Configuration.browser = System.getProperty("browser", "firefox");
+        Configuration.browserVersion = System.getProperty("browser_version", "124.0");
         Configuration.timeout = 10000;
-        Configuration.browser = "firefox";
-        Configuration.browserVersion = "124.0";
 
         
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
@@ -28,8 +28,6 @@ public class TestBase {
                 "enableVideo", true
         ));
         Configuration.browserCapabilities = capabilities;
-
-        Configuration.baseUrl = "https://www.lamoda.by/";
     }
 
     @BeforeEach

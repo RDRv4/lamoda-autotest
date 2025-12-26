@@ -41,10 +41,3 @@ test {
     systemProperties(System.getProperties())
     useJUnitPlatform()
 }
-
-tasks.register('simple_test', Test) {
-    systemProperties(System.getProperties())
-    useJUnitPlatform {
-        includeTags 'simple'
-    }
-}
