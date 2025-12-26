@@ -1,0 +1,21 @@
+{
+  "base": {
+    "logo": "",
+    "project": "Lamoda",
+    "environment": "",
+    "comment": "First comment",
+    "reportLink": "",
+    "language": "ru",
+    "allureFolder": "build/allure-report/",
+    "enableChart": false,
+    "enableSuitesPublishing": false,
+    "customData": {}
+  },
+  "telegram": {
+    "token": "8595537973:AAEJoA_0bW9IGXH7LefZ9zCEkpz5t8u8DuE",
+    "chat": "1003587944702",
+    "topic": "",
+    "replyTo": "",
+    "templatePath": "/templates/telegram.ftl"
+  }
+}
