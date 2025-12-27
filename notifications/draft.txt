@@ -1,0 +1,13 @@
+https://api.telegram.org/bot8595537973:AAEJoA_0bW9IGXH7LefZ9zCEkpz5t8u8DuE/getUpdates
+
+8595537973:AAEJoA_0bW9IGXH7LefZ9zCEkpz5t8u8DuE
+@AllureTest4Bot
+https://api.telegram.org/bot8595537973:AAEJoA_0bW9IGXH7LefZ9zCEkpz5t8u8DuE/getUpdates
+
+id_chat 1003587944702
+
+
+curl -X POST
+     -H 'Content-Type: application/json'
+     -d '{"chat_id": 1003587944702, "text": "This is a test from curl", "disable_notification": true}'
+     https://api.telegram.org/bot8595537973:AAEJoA_0bW9IGXH7LefZ9zCEkpz5t8u8DuE/sendMessage
