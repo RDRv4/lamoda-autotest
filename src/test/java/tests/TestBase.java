@@ -21,8 +21,8 @@ public class TestBase {
     static void beforeAll() {
         Configuration.baseUrl = System.getProperty("base_url", "https://www.lamoda.by/");
         Configuration.browserSize = System.getProperty("browser_size", "1920x1080");
-        Configuration.browser = System.getProperty("browser", "firefox");
-        Configuration.browserVersion = System.getProperty("browser_version", "124.0");
+        Configuration.browser = System.getProperty("browser", "chrome");
+        Configuration.browserVersion = System.getProperty("browser_version", "128.0");
         Configuration.timeout = 10000;
 
         
