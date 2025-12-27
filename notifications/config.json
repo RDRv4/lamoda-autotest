@@ -1,13 +1,13 @@
 {
   "base": {
     "logo": "",
-    "project": "Lamoda",
-    "environment": "",
+    "project": "${JOB_BASE_NAME}",
+    "environment": "env",
     "comment": "First comment",
-    "reportLink": "",
+    "reportLink": "${BUILD_URL}",
     "language": "ru",
     "allureFolder": "allure-report/",
-    "enableChart": false,
+    "enableChart": true,
     "enableSuitesPublishing": false,
     "customData": {}
   },
