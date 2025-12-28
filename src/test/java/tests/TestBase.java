@@ -44,15 +44,15 @@ public class TestBase {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
     }
 
-//    @AfterEach
-//    void addAttachments() {
-//        Attach.screenshotAs("Last screenshot");
-//        Attach.pageSource();
-//        Attach.browserConsoleLogs();
-//        Attach.addVideo();
-//        step("Очищаем cookies", () -> {
-//            clearBrowserCookies();
-//            clearBrowserLocalStorage();
-//        });
-//    }
+    @AfterEach
+    void addAttachments() {
+        Attach.screenshotAs("Last screenshot");
+        Attach.pageSource();
+        Attach.browserConsoleLogs();
+        Attach.addVideo();
+        step("Очищаем cookies", () -> {
+            clearBrowserCookies();
+            clearBrowserLocalStorage();
+        });
+    }
 }

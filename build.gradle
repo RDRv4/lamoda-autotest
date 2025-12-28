@@ -35,6 +35,7 @@ dependencies {
     implementation("io.qameta.allure:allure-selenide:2.32.0")
     testImplementation("org.slf4j:slf4j-simple:2.0.17")
     implementation("org.aeonbits.owner:owner:1.0.12")
+    implementation("com.assertthat:selenium-shutterbug:1.5")
 
     testImplementation("io.qameta.allure:allure-junit5:2.29.1")
 }
