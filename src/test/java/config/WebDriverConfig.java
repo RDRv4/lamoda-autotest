@@ -24,6 +24,6 @@ public interface WebDriverConfig extends Config {
     String remoteUrl();
 
     @Key("baseUrl")
-    @DefaultValue("https://www.lamoda.by/")
+    @DefaultValue("https://www.lamoda.by")
     String baseUrl();
 }
