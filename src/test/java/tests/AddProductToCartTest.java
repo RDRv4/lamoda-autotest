@@ -1,27 +1,35 @@
 package tests;
 
+import io.qameta.allure.Story;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
+import pages.AddProductToCart;
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
+
+@Story("Добавление товара в корзину")
+@Tags({@Tag("ui")})
 
 public class AddProductToCartTest extends TestBase {
 
     @Test
     void testAddingToCart() {
 
+        AddProductToCart addProductToCart = new AddProductToCart();
+        String sizePriduct = "44 RUS";
+
+
         step("Open Product Card", () -> {
-            open("/p/rtlaeq682801/shoes-hebymango-botinki/");
+            addProductToCart.openPage();
         });
 
-        step("Select size", () -> {
-            $("._sizeValue_14ypi_285").shouldHave(text("Выберите размер")).click();
-            $$("._colspanMain_14ypi_184").findBy(text("44 RUS")).click();
+        step("Choose size for Product", () -> {
+            addProductToCart.chooseSizeProduct(sizePriduct);
         });
 
         step("Click on 'Add to Cart' button", () -> {
-            $("._wrapper_1u4cj_6").shouldHave(text("Добавить в корзину")).click();
+            addProductToCart.addProductToCart();
         });
     }
 }
