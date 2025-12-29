@@ -8,7 +8,6 @@ import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 import pages.AddProductToCart;
 
-import static com.codeborne.selenide.Selenide.sleep;
 import static io.qameta.allure.Allure.step;
 
 @Owner("d.rudovich")
@@ -22,7 +21,7 @@ public class AddProductToCartTest extends TestBase {
     void testAddingToCart() {
 
         AddProductToCart addProductToCart = new AddProductToCart();
-        String sizeProduct = "44 RUS";
+        String productSize = "44 RUS";
 
 
         step("Open Product Card", () -> {
@@ -30,17 +29,15 @@ public class AddProductToCartTest extends TestBase {
         });
 
         step("Choose size for Product", () -> {
-            addProductToCart.chooseSizeProduct(sizeProduct);
+            addProductToCart.chooseSizeProduct(productSize);
         });
 
         step("Click on 'Add to Cart' button", () -> {
             addProductToCart.addProductToCart();
         });
 
-        step("Cheking Product size in the Cart", () -> {
-            addProductToCart.assertProductSizeInCart(sizeProduct);
+        step("Checking Product size in the Cart", () -> {
+            addProductToCart.assertProductSizeInCart(productSize);
         });
-
-        sleep(2000);
     }
 }
