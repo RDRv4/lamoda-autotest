@@ -5,8 +5,8 @@
 - [Technologies and Tools](#gear-technologies-and-tools)
 - [Test Cases](#heavy_check_mark-test-cases)
 - [Running Tests](#computer-running-tests-from-terminal)
-- [Usage Examples](#usage-examples)
 - [Running Tests in Jenkins](#running-tests-in-jenkins)
+- [Allure Report](#allure-report)
 - [Telegram Notifications](#telegram-notifications)
 - [Test Execution Video](#movie_camera-test-execution-video)
 
@@ -69,13 +69,24 @@ gradle clean test
 
 ## <img width="4%" title="Jenkins" src="media/logo/Jenkins.svg"> Running Tests in [Jenkins](https://jenkins.autotests.cloud/job/030_rudovich_jenkins_tests_modsen/)
 
-To start a build, go to <code><strong>Build with Parameters</strong></code> and click <code><strong>
-Build</strong></code>.
+To start a build, go to <code><strong>Build with Parameters</strong></code> and click <code><strong>Build</strong></code>.
 
 <p align="center">
   <img src="media/screen/start_jenkins.png" alt="Jenkins" width="800">
 </p>
 
+## :allure: Report
+## <img width="4%" title="Allure Report" src="media/logo/Allure_Report.svg"> Result of Testing in   [Allure Report](https://jenkins.autotests.cloud/job/015_aziyatdinov_final_ui/1/allure/)
+
+<p align="center">
+  <img src="media/screen/jenkins_overview.png" alt="allure-report" width="900">
+</p>
+
+<p align="center">
+  <img src="media/screen/jenkins_behaviors.png" alt="allure-report_1" width="900">
+</p>
+
+## :telegram: Notifications
 ## <img width="4%" title="Telegram" src="media/logo/Telegram.svg"> Telegram Notifications
 
 After the build is complete, a dedicated bot in <code>Telegram</code> automatically processes and sends a message with
