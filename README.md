@@ -102,3 +102,5 @@ In Allure reports, each test includes not only screenshots but also a video reco
 <p align="center">
   <img title="Video" src="media/video/Lamoda_tests.gif">
 </p>
+
+:arrow_up:[Back to top](#project-automated-testing-of-online-store-lamoda)
